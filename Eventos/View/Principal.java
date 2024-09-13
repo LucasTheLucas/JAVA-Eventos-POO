@@ -1,6 +1,5 @@
 package Eventos.View;
 import Eventos.Model.*;
-
 import javax.swing.*;
 import java.util.ArrayList;
 

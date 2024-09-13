@@ -70,6 +70,6 @@ public class Evento
     @Override
     public String toString()
     {
-        return this.nomeDoEvento + " - (" + this.dataDoInicio + " - " + this.dataDoFim + ")\nDescrição: " + this.descricao + "\n" + sessao.toString();
+        return this.id + " - " + this.nomeDoEvento + " - (" + this.dataDoInicio + " - " + this.dataDoFim + ")\nDescrição: " + this.descricao + "\n" + sessao.toString();
     }
 }
