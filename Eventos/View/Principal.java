@@ -27,7 +27,7 @@ public class Principal {
         sessao1.setInscricao(diasInscricao);
 
         evento1.setSessao(sessao1);
-        evento2.setSessao(sessao1);
+        evento1.setSessao(sessao1);
 
         eventos.add(evento1);
         eventos.add(evento2);

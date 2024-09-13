@@ -7,8 +7,8 @@ public class Evento
 {
     private String nomeDoEvento;
     private String descricao;
-    private String dataDoInicio;
-    private String dataDoFim;
+    private String horaDoInicio;
+    private String horaDoFim;
     private int id;
     private ArrayList<Sessao> sessao = new ArrayList<>();
 
@@ -17,8 +17,8 @@ public class Evento
     {
         this.nomeDoEvento = nomeDoEvento;
         this.descricao = descricao;
-        this.dataDoInicio = dataInicio;
-        this.dataDoFim = dataFim;
+        this.horaDoInicio = dataInicio;
+        this.horaDoFim = dataFim;
         this.id = id;
     }
 
@@ -39,19 +39,19 @@ public class Evento
     }
 
     public String getDataDoInicio() {
-        return dataDoInicio;
+        return horaDoInicio;
     }
 
     public void setDataDoInicio(String dataDoInicio) {
-        this.dataDoInicio = dataDoInicio;
+        this.horaDoInicio = dataDoInicio;
     }
 
     public String getDataDoFim() {
-        return dataDoFim;
+        return horaDoFim;
     }
 
     public void setDataDoFim(String dataDoFim) {
-        this.dataDoFim = dataDoFim;
+        this.horaDoFim = dataDoFim;
     }
 
     public int getId() {
@@ -69,7 +69,11 @@ public class Evento
 
     @Override
     public String toString()
-    {
-        return this.id + " - " + this.nomeDoEvento + " - (" + this.dataDoInicio + " - " + this.dataDoFim + ")\nDescrição: " + this.descricao + "\n" + sessao.toString();
+    {   String texto = "---------------------------\n" + this.id + " - " + this.nomeDoEvento + " - (" + this.horaDoInicio + " - " + this.horaDoFim + ")\nDescrição: " + this.descricao + "\n\n";
+        for (int i = 0; i < sessao.size(); i++)
+        {
+            texto += "Sessão número: "+ (i+1) + "\n" + sessao.get(i).toString() + "\n";
+        }
+        return texto;
     }
 }
