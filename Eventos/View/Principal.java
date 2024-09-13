@@ -36,7 +36,7 @@ public class Principal {
         eventos.add(evento1);
         eventos.add(evento2);
 
-        //Concatena tudo em uma só mensagem!
+
         String completo = "";
 
         for (int i = 0; i < eventos.size(); i++)
