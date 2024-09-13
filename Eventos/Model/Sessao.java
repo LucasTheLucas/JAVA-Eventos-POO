@@ -64,7 +64,7 @@ public class Sessao {
     {
         String nomes = "";
         for (int i = 0; i < inscricao.size(); i++) {
-            nomes += inscricao.get(i).getId()+ " - " + inscricao.get(i).getParticipante().getNome()+"\n";
+            nomes += inscricao.get(i).getId()+ " - " + inscricao.get(i).getParticipante().getNome()+" - "+ inscricao.get(i).getParticipante().getDataDeNascimento() +"\n";
         }
         return this.id+ " - Palestra com: " + this.palestrante.getNome() + "\nInscritos:\n" + nomes;
     }

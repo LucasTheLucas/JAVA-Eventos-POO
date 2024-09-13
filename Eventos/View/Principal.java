@@ -2,6 +2,7 @@ package Eventos.View;
 import Eventos.Model.*;
 import javax.swing.*;
 import java.util.ArrayList;
+import java.util.Calendar;
 
 
 public class Principal {
@@ -10,10 +11,13 @@ public class Principal {
     {
         Evento evento1 = new Evento("Programação 101","Um evento de programação","19:00","22:30",1);
         Evento evento2 = new Evento("Programação 404","Um evento de programação","19:00","22:30",2);
+        Calendar calendario = Calendar.getInstance();
 
-        Participante lucas = new Participante(1,"05/07/2004","Lucas","l@gmail.com","46999329498","12740874901");
-        Participante Novaes = new Participante(2,"05/07/2004","Novaes","novaes@gmail.com","46999329498","12740874901");
-        Participante Dias = new Participante(3,"05/07/2004","Dias","dias@gmail.com","46999329498","12740874901");
+        calendario.set(2004,07,05);
+
+        Participante lucas = new Participante(1,calendario.getTime(),"Lucas","l@gmail.com","46999329498","12740874901");
+        Participante Novaes = new Participante(2,calendario.getTime(),"Novaes","novaes@gmail.com","46999329498","12740874901");
+        Participante Dias = new Participante(3,calendario.getTime(),"Dias","dias@gmail.com","46999329498","12740874901");
 
         Inscricao lucasInscricao = new Inscricao(1,"11/09/2024",lucas);
         Inscricao novaesInscricao = new Inscricao(2,"11/09/2024",Novaes);

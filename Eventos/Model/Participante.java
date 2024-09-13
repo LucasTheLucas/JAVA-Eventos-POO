@@ -1,14 +1,17 @@
 package Eventos.Model;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 public class Participante {
     private int id;
-    private String dataDeNascimento;
+    private Date dataDeNascimento;
     private String nome;
     private String email;
     private String telefone;
     private String cpf;
 
-    public Participante(int id, String dataDeNascimento, String nome, String email, String telefone, String cpf)
+    public Participante(int id, Date dataDeNascimento, String nome, String email, String telefone, String cpf)
     {
         this.id = id;
         this.dataDeNascimento = dataDeNascimento;
@@ -27,10 +30,11 @@ public class Participante {
     }
 
     public String getDataDeNascimento() {
-        return dataDeNascimento;
+        SimpleDateFormat dataSimple = new SimpleDateFormat("dd/MM/yyyy");
+        return dataSimple.format(this.dataDeNascimento);
     }
 
-    public void setDataDeNascimento(String dataDeNascimento) {
+    public void setDataDeNascimento(Date dataDeNascimento){
         this.dataDeNascimento = dataDeNascimento;
     }
 
