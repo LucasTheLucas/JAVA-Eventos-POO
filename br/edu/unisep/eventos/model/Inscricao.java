@@ -1,6 +1,4 @@
-package Eventos.Model;
-
-import java.util.Date;
+package br.edu.unisep.eventos.model;
 
 public class Inscricao {
     private int id;

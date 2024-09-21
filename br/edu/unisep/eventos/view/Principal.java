@@ -1,5 +1,6 @@
-package Eventos.View;
-import Eventos.Model.*;
+package br.edu.unisep.eventos.view;
+import br.edu.unisep.eventos.model.*;
+
 import javax.swing.*;
 import java.util.ArrayList;
 import java.util.Calendar;

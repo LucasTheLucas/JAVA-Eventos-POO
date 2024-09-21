@@ -1,24 +1,23 @@
-package Eventos.Model;
+package br.edu.unisep.eventos.model;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class Palestrante {
+public class Participante {
     private int id;
-    private String dataDeNascimento;
+    private Date dataDeNascimento;
     private String nome;
     private String email;
     private String telefone;
-    private String especialidade;
     private String cpf;
 
-    public Palestrante(int id, String dataDeNascimento, String nome, String email, String telefone, String especialidade, String cpf)
+    public Participante(int id, Date dataDeNascimento, String nome, String email, String telefone, String cpf)
     {
         this.id = id;
         this.dataDeNascimento = dataDeNascimento;
         this.nome = nome;
         this.email = email;
         this.telefone = telefone;
-        this.especialidade = especialidade;
         this.cpf = cpf;
     }
 
@@ -31,10 +30,11 @@ public class Palestrante {
     }
 
     public String getDataDeNascimento() {
-        return dataDeNascimento;
+        SimpleDateFormat dataSimple = new SimpleDateFormat("dd/MM/yyyy");
+        return dataSimple.format(this.dataDeNascimento);
     }
 
-    public void setDataDeNascimento(String dataDeNascimento) {
+    public void setDataDeNascimento(Date dataDeNascimento){
         this.dataDeNascimento = dataDeNascimento;
     }
 
@@ -62,14 +62,6 @@ public class Palestrante {
         this.telefone = telefone;
     }
 
-    public String getEspecialidade() {
-        return especialidade;
-    }
-
-    public void setEspecialidade(String especialidade) {
-        this.especialidade = especialidade;
-    }
-
     public String getCpf() {
         return cpf;
     }
@@ -78,3 +70,5 @@ public class Palestrante {
         this.cpf = cpf;
     }
 }
+
+

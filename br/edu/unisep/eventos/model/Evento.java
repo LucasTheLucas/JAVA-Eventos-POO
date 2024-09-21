@@ -1,7 +1,6 @@
-package Eventos.Model;
+package br.edu.unisep.eventos.model;
 
 import java.util.ArrayList;
-import java.util.Date;
 
 public class Evento
 {
